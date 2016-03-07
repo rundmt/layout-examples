@@ -55,19 +55,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingBottom: 20
   },
-  column :{
-    flexDirection: 'column',
-    flex: 1
-  },
   headerText:{
     fontSize: 30,
     textAlign: 'center'
   },
-  item: {
-    // padding: 10,
-    borderWidth: 1,
-    borderColor: 'black'
-  }
 });
 
 AppRegistry.registerComponent('layoutExamples', () => layoutExamples);
