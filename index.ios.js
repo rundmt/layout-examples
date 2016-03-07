@@ -18,41 +18,29 @@ import React, {
   Dimensions
 } from 'react-native';
 
-var {width, height} = Dimensions.get('window');
-
 class layoutExamples extends Component {
   render() {
-    if(width >= 768){
-      return (
-        <ScrollView style={styles.container}>
-          <Text style={styles.headerText}>React PhotoView</Text>
-          <View style={styles.row}>
-            <ImageBlock imageText={'Image 1'} likes={1}/>
-            <ImageBlock imageText={'Image 2'} likes={1}/>
-            <ImageBlock imageText={'Image 3'} likes={1}/>
-            <ImageBlock imageText={'Image 4'} likes={1}/>
-          </View>
-        </ScrollView>
-      )
-    } else {
-      return (
-        <ScrollView style={styles.container}>
-          <Text style={styles.headerText}>React PhotoView</Text>
-          <View style={styles.row}>
-            <ImageBlock imageText={'Image 1'} likes={1}/>
-          </View>
-          <View style={styles.row}>
-            <ImageBlock imageText={'Image 2'} likes={1}/>
-          </View>
-          <View style={styles.row}>
-            <ImageBlock imageText={'Image 3'} likes={1}/>
-          </View>
-          <View style={styles.row}>
-            <ImageBlock imageText={'Image 4'} likes={1}/>
-          </View>
-        </ScrollView>
-      );
-    }
+    return (
+      <ScrollView style={styles.container}>
+        <Text style={styles.headerText}>React PhotoView</Text>
+        <Col>
+          <Row size={12} wrap>
+            <Col sm={12} md={3}>
+              <ImageBlock imageText={'Image 1'} likes={1}/>
+            </Col>
+            <Col sm={12} md={3}>
+              <ImageBlock imageText={'Image 2'} likes={1}/>
+            </Col>
+            <Col sm={12} md={3}>
+              <ImageBlock imageText={'Image 3'} likes={1}/>
+            </Col>
+            <Col sm={12} md={3}>
+              <ImageBlock imageText={'Image 4'} likes={1}/>
+            </Col>
+          </Row>
+        </Col>
+      </ScrollView>
+    );
   }
 }
 

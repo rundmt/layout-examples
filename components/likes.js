@@ -21,14 +21,11 @@ var {width, height} = Dimensions.get('window');
 
 export default class ImageBlock extends Component {
   render() {
-    if(width < 768){
-      return (
+    return (
+      <Col mdHidden>
         <Text>{this.props.likes} likes</Text>
-      );
-    } else {
-      return null;
-    }
-
+      </Col>
+    );
   }
 }
 
