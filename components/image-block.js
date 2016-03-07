@@ -18,13 +18,28 @@ import React, {
 } from 'react-native';
 
 export default class ImageBlock extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      height: 0
+    }
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+    return nextState.height !== this.state.height;
+  }
+
+  _onLayout(res){
+    this.setState({height: res.nativeEvent.layout.width});
+  }
 
   render() {
     return (
       <View style={[styles.column, styles.item]}>
         <Image
+          onLayout={this._onLayout.bind(this)}
           source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
-          style={{flex: 1, height: 365, resizeMode: 'contain'}}/>
+          style={{flex: 1, height: this.state.height, resizeMode: 'contain'}}/>
         <Text>{this.props.imageText}</Text>
       </View>
     );
