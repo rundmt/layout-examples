@@ -24,7 +24,7 @@ export default class ImageBlock extends Component {
       <View style={[styles.column, styles.item]}>
         <Image
           source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
-          style={{flex: 1, height: 192}}/>
+          style={{flex: 1, height: 365}}/>
         <Text>{this.props.imageText}</Text>
       </View>
     );
