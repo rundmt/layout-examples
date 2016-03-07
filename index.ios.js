@@ -27,10 +27,10 @@ class layoutExamples extends Component {
         <ScrollView style={styles.container}>
           <Text style={styles.headerText}>React PhotoView</Text>
           <View style={styles.row}>
-            <ImageBlock imageText={'Image 1'}/>
-            <ImageBlock imageText={'Image 2'}/>
-            <ImageBlock imageText={'Image 3'}/>
-            <ImageBlock imageText={'Image 4'}/>
+            <ImageBlock imageText={'Image 1'} likes={1}/>
+            <ImageBlock imageText={'Image 2'} likes={1}/>
+            <ImageBlock imageText={'Image 3'} likes={1}/>
+            <ImageBlock imageText={'Image 4'} likes={1}/>
           </View>
         </ScrollView>
       )
@@ -39,16 +39,16 @@ class layoutExamples extends Component {
         <ScrollView style={styles.container}>
           <Text style={styles.headerText}>React PhotoView</Text>
           <View style={styles.row}>
-            <ImageBlock imageText={'Image 1'}/>
+            <ImageBlock imageText={'Image 1'} likes={1}/>
           </View>
           <View style={styles.row}>
-            <ImageBlock imageText={'Image 2'}/>
+            <ImageBlock imageText={'Image 2'} likes={1}/>
           </View>
           <View style={styles.row}>
-            <ImageBlock imageText={'Image 3'}/>
+            <ImageBlock imageText={'Image 3'} likes={1}/>
           </View>
           <View style={styles.row}>
-            <ImageBlock imageText={'Image 4'}/>
+            <ImageBlock imageText={'Image 4'} likes={1}/>
           </View>
         </ScrollView>
       );

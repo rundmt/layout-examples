@@ -4,7 +4,7 @@
  */
 'use strict';
 
-import {Column as Col, Row} from 'react-native-flexbox-grid';
+import Likes from './likes';
 
 import React, {
   AppRegistry,
@@ -14,8 +14,10 @@ import React, {
   StyleSheet,
   Text,
   ScrollView,
-  View
+  View,
+  Dimensions
 } from 'react-native';
+var {width, height} = Dimensions.get('window');
 
 export default class ImageBlock extends Component {
   constructor(props){
@@ -40,7 +42,10 @@ export default class ImageBlock extends Component {
           onLayout={this._onLayout.bind(this)}
           source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
           style={{flex: 1, height: this.state.height, resizeMode: 'contain'}}/>
-        <Text>{this.props.imageText}</Text>
+        <View style={styles.row}>
+          <Text style={styles.column}>{this.props.imageText}</Text>
+          <Likes likes={this.props.likes} />
+        </View>
       </View>
     );
   }
@@ -53,5 +58,8 @@ const styles = StyleSheet.create({
   },
   item: {
     padding: 5
+  },
+  row: {
+    flexDirection: 'row'
   }
 });
