@@ -10,6 +10,7 @@ import React, {
   AppRegistry,
   Component,
   Image,
+  PixelRatio,
   StyleSheet,
   Text,
   ScrollView,
@@ -23,7 +24,7 @@ export default class ImageBlock extends Component {
       <View style={[styles.column, styles.item]}>
         <Image
           source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
-          style={{width: 192, height: 192}}/>
+          style={{flex: 1, height: 192}}/>
         <Text>{this.props.imageText}</Text>
       </View>
     );
@@ -36,7 +37,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   item: {
-    borderWidth: 1,
-    borderColor: 'black'
+    padding: 5
   }
 });

@@ -24,21 +24,15 @@ class layoutExamples extends Component {
         <Text style={styles.headerText}>React PhotoView</Text>
         <View style={styles.row}>
           <ImageBlock imageText={'Image 1'}/>
+        </View>
+        <View style={styles.row}>
           <ImageBlock imageText={'Image 2'}/>
+        </View>
+        <View style={styles.row}>
           <ImageBlock imageText={'Image 3'}/>
+        </View>
+        <View style={styles.row}>
           <ImageBlock imageText={'Image 4'}/>
-        </View>
-        <View style={styles.row}>
-          <ImageBlock imageText={'Image 5'}/>
-          <ImageBlock imageText={'Image 6'}/>
-          <ImageBlock imageText={'Image 7'}/>
-          <ImageBlock imageText={'Image 8'}/>
-        </View>
-        <View style={styles.row}>
-          <ImageBlock imageText={'Image 9'}/>
-          <ImageBlock imageText={'Image 10'}/>
-          <ImageBlock imageText={'Image 11'}/>
-          <ImageBlock imageText={'Image 12'}/>
         </View>
       </ScrollView>
     );
@@ -57,6 +51,7 @@ const styles = StyleSheet.create({
   },
   headerText:{
     fontSize: 30,
+    marginBottom: 20,
     textAlign: 'center'
   },
 });
