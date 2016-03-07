@@ -14,28 +14,45 @@ import React, {
   StyleSheet,
   Text,
   ScrollView,
-  View
+  View,
+  Dimensions
 } from 'react-native';
+
+var {width, height} = Dimensions.get('window');
 
 class layoutExamples extends Component {
   render() {
-    return (
-      <ScrollView style={styles.container}>
-        <Text style={styles.headerText}>React PhotoView</Text>
-        <View style={styles.row}>
-          <ImageBlock imageText={'Image 1'}/>
-        </View>
-        <View style={styles.row}>
-          <ImageBlock imageText={'Image 2'}/>
-        </View>
-        <View style={styles.row}>
-          <ImageBlock imageText={'Image 3'}/>
-        </View>
-        <View style={styles.row}>
-          <ImageBlock imageText={'Image 4'}/>
-        </View>
-      </ScrollView>
-    );
+    if(width >= 768){
+      return (
+        <ScrollView style={styles.container}>
+          <Text style={styles.headerText}>React PhotoView</Text>
+          <View style={styles.row}>
+            <ImageBlock imageText={'Image 1'}/>
+            <ImageBlock imageText={'Image 2'}/>
+            <ImageBlock imageText={'Image 3'}/>
+            <ImageBlock imageText={'Image 4'}/>
+          </View>
+        </ScrollView>
+      )
+    } else {
+      return (
+        <ScrollView style={styles.container}>
+          <Text style={styles.headerText}>React PhotoView</Text>
+          <View style={styles.row}>
+            <ImageBlock imageText={'Image 1'}/>
+          </View>
+          <View style={styles.row}>
+            <ImageBlock imageText={'Image 2'}/>
+          </View>
+          <View style={styles.row}>
+            <ImageBlock imageText={'Image 3'}/>
+          </View>
+          <View style={styles.row}>
+            <ImageBlock imageText={'Image 4'}/>
+          </View>
+        </ScrollView>
+      );
+    }
   }
 }
 
