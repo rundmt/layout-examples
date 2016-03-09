@@ -4,7 +4,7 @@
  */
 'use strict';
 
-import {Column as Col, Row} from 'react-native-flexbox-grid';
+import {Column as Col, Row, SCREEN_SIZE} from 'react-native-flexbox-grid';
 import ImageBlock from './components/image-block';
 
 import React, {
@@ -22,8 +22,7 @@ class layoutExamples extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={styles.headerText}>React PhotoView</Text>
-        <Col>
+        <Text style={styles.headerText}>React PhotoView</Text>        
           <Row size={12} wrap>
             <Col sm={12} md={3}>
               <ImageBlock imageText={'Image 1'} likes={1}/>
@@ -38,7 +37,6 @@ class layoutExamples extends Component {
               <ImageBlock imageText={'Image 4'} likes={1}/>
             </Col>
           </Row>
-        </Col>
       </ScrollView>
     );
   }
